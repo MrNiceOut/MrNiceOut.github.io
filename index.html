@@ -2,9 +2,17 @@
 <html>
     <head>
         <title>Sports Betting for the Fam</title>
+        <script>
+            (function (w,d,s,o,f,js,fjs) {
+                w['SBDOddsWidget']=o;w[o] = w[o] || function () { (w[o].q = w[o].q || []).push(arguments) };
+                js = d.createElement(s), fjs = d.getElementsByTagName(s)[0];
+                js.id = o; js.src = f; js.async = 1; fjs.parentNode.insertBefore(js, fjs);
+            }(window, document, 'script', 'sbd_odds', 'https://www.sportsbettingdime.com/app/themes/SportsBettingDime/assets/scripts/sbd-odds-widget.js'));
+            sbd_odds('init', {});
+        </script>
     </head>
       
-      <body>
+    <body>
         <nav>
           <a href="./index.html">Home</a>
           <!--<a href="./aboutme.html">About Me</a>-->
@@ -15,11 +23,21 @@
           <p>
             This website provides useful information in an easy to read format for the upcoming sports games. I will eventually add tabs for each sport.
           </p>
+          <h3>Betting Odds Widget</h3>
+          <script>
+            sbd_odds('display',{
+            "league":"NFL",
+            "show_concensus":false,
+            "show_predictions":false,
+            "show_betnow":false,
+            "target": "container-300x600",
+            "size": "300x600"}); </script>
+            <div class="demo" id="container-300x600"></div>
           <h3>References</h3>
           <ul>
             <li><a href="https://www.espn.com/nfl/stats/_/view/team" target="_blank">NFL Stats ESPN</a></li>
           </ul>
                            
-      </body>
+    </body>
       
 </html>
